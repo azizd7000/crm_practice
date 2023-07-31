@@ -1,0 +1,15 @@
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\crm.csproj.AssemblyReference.cache
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\crm.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\crm.AssemblyInfoInputs.cache
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\crm.AssemblyInfo.cs
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\crm.csproj.CoreCompileInputs.cache
+D:\c#_course\crm-practice\src\crm\bin\Debug\net7.0\crm.exe
+D:\c#_course\crm-practice\src\crm\bin\Debug\net7.0\crm.deps.json
+D:\c#_course\crm-practice\src\crm\bin\Debug\net7.0\crm.runtimeconfig.json
+D:\c#_course\crm-practice\src\crm\bin\Debug\net7.0\crm.dll
+D:\c#_course\crm-practice\src\crm\bin\Debug\net7.0\crm.pdb
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\crm.dll
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\refint\crm.dll
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\crm.pdb
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\crm.genruntimeconfig.cache
+D:\c#_course\crm-practice\src\crm\obj\Debug\net7.0\ref\crm.dll
