@@ -35,17 +35,18 @@ public sealed class Client
                                      } 
                                      }
                                      }
-    public required short Age { 
-                                get  => Age;
-                                set  {
-                                     if (!string.IsNullOrEmpty(value)){
-                                      Age = value;
-                                     }
-                                     else {
-                                       throw new ArgumentOutOfRangeException(nameof(Age), "Поле не может быть пустым") ; 
-                                     } 
-                                     }
-                                     }
+    // public required short Age { 
+    //                             get  => Age;
+    //                             set  {
+    //                                  if (!string.IsNullOrEmpty(value)){
+    //                                   (Age) = value;
+    //                                  }
+    //                                  else {
+    //                                    throw new ArgumentOutOfRangeException(nameof(Age), "Поле не может быть пустым") ; 
+    //                                  } 
+    //                                  }
+    //                                  }
+    public short Age {get;set;}
     public required string PassportNumber { 
                                 get  => PassportNumber;
                                 set  {
@@ -64,7 +65,7 @@ public sealed class Client
                                       Gender = value;
                                      }
                                      else {
-                                       throw new ArgumentOutOfRangeException(nameof(GenderZ), "Поле не может быть пустым") ; 
+                                       throw new ArgumentOutOfRangeException(nameof(Gender), "Поле не может быть пустым") ; 
                                      } 
                                      }
                                      }
