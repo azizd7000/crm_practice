@@ -3,16 +3,23 @@ using Crm;
 namespace Crm.Services;
 public sealed class OrderService
 {
-    public Order CreateOrder(OrderInfo orderInfo) 
-   {
-   return new()
-   {
-    OrderId = orderInfo.Id,
-    OrderDesc = orderInfo.Desc,
-    OrderPrice = orderInfo.Price,
-    OrderDate = orderInfo.Date,
-    OrderType = orderInfo.Type,
-    OrderAddress = orderInfo.Address
-   }   ;
-   } 
+    public Order CreateOrder(
+        string id,
+        string desc,
+        string price,
+        string date,
+        string type,
+        string address
+    )
+    {
+     return new()
+     {
+        Id = id,
+        Desc = desc,
+        Price = price,
+        Date = date,
+        Type = type,
+        Address = address
+     }   ;
+    }
 }

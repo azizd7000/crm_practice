@@ -4,7 +4,7 @@ namespace Crm.Services;
 public sealed class ClientService
 {
    public Client CreateClient(
-       string firstName,
+        string firstName,
         string lastName,
         string middleName,
         short  age,
@@ -15,12 +15,13 @@ public sealed class ClientService
    {
    return new()
    {
-    FirstName = firstName,
-    LastName = lastName,
-    MiddleName = middleName,
-    Age = age,
-    PassportNumber = passportNumber,
-    Gender = gender
+      FirstName = firstName,
+      LastName = lastName,
+      MiddleName = middleName,
+      Age = age,
+      PassportNumber = passportNumber,
+      Gender = gender
    }   ;
    } 
+   
 }

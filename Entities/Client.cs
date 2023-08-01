@@ -1,74 +1,42 @@
 namespace Crm.Entities;
+
 public sealed class Client
 {
+    private string _firstName;
+    private string _lastName;
+    private string _middleName;
+    private short _age;
+    private string _passportNumber;
+    private string _gender;
+
     public required string FirstName { 
-                                get  => FirstName;
-                                set  {
-                                     if (!string.IsNullOrEmpty(value)){
-                                      FirstName = value;
-                                     }
-                                     else {
-                                       throw new ArgumentOutOfRangeException(nameof(FirstName), "Поле не может быть пустым") ; 
-                                     } 
-                                     }
+                                      get => _firstName ?? string.Empty;
+                                      init => _firstName = value is { Length: > 0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
                                      }
                             
     public required string LastName  { 
-                                get  => LastName;
-                                set  {
-                                     if (!string.IsNullOrEmpty(value)){
-                                      LastName = value;
-                                     }
-                                     else {
-                                       throw new ArgumentOutOfRangeException(nameof(LastName), "Поле не может быть пустым") ; 
-                                     } 
-                                     }
+                                      get => _lastName ?? string.Empty;
+                                      init => _lastName = value is { Length: > 0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
                                      }
     public required string MiddleName { 
-                                get  => MiddleName;
-                                set  {
-                                     if (!string.IsNullOrEmpty(value)){
-                                      MiddleName = value;
+                                       get => _lastName ?? string.Empty;
+                                       init => _lastName = value is { Length: > 0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
                                      }
-                                     else {
-                                       throw new ArgumentOutOfRangeException(nameof(MiddleName), "Поле не может быть пустым") ; 
-                                     } 
-                                     }
-                                     }
-    // public required short Age { 
-    //                             get  => Age;
-    //                             set  {
-    //                                  if (!string.IsNullOrEmpty(value)){
-    //                                   (Age) = value;
-    //                                  }
-    //                                  else {
-    //                                    throw new ArgumentOutOfRangeException(nameof(Age), "Поле не может быть пустым") ; 
-    //                                  } 
-    //                                  }
-    //                                  }
-    public short Age {get;set;}
+  
+    public short Age {
+        //get; set;
+        get => _age;
+        init => _age = value > 0 ? value : throw new ArgumentOutOfRangeException(nameof(value),"Возраст не может быть минусовым");
+
+    }
     public required string PassportNumber { 
-                                get  => PassportNumber;
-                                set  {
-                                     if (!string.IsNullOrEmpty(value)){
-                                      PassportNumber = value;
-                                     }
-                                     else {
-                                       throw new ArgumentOutOfRangeException(nameof(PassportNumber), "Поле не может быть пустым") ; 
-                                     } 
-                                     }
-                                     }
-    public required string Gender  { 
-                                get  => Gender;
-                                set  {
-                                     if (!string.IsNullOrEmpty(value)){
-                                      Gender = value;
-                                     }
-                                     else {
-                                       throw new ArgumentOutOfRangeException(nameof(Gender), "Поле не может быть пустым") ; 
-                                     } 
-                                     }
-                                     }
+                                           get => _passportNumber ?? string.Empty;
+                                           init => _passportNumber = value is { Length: >  0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
+                                          }
+    public required string Gender {  
+                                   get => _gender ?? string.Empty;
+                                   init => _gender = value is { Length: > 0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
+                                  }
 
    
 }

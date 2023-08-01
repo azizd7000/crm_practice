@@ -50,36 +50,36 @@ void CreateClient()
 void CreateOrder()
 {   
     Console.Write("ID_заказа: ");
-    string orderId = Console.ReadLine();
+    string id = Console.ReadLine();
     
     Console.Write("Описание заказа: ");
-    string orderDesc = Console.ReadLine();
+    string desc = Console.ReadLine();
 
     Console.Write("Цена заказа: ");
-    string orderPrice = Console.ReadLine();
+    string price = Console.ReadLine();
 
     Console.Write("Дата заказа: ");
-    string orderDate = Console.ReadLine();
+    string date = Console.ReadLine();
 
     Console.Write("Тип заказа: ");
-    string orderType = Console.ReadLine();
+    string type = Console.ReadLine();
 
 
     Console.Write("Адрес заказа: ");
-    string orderAddress = Console.ReadLine();
+    string address = Console.ReadLine();
  
+   
     
-    Order newOrder = orderService.CreateOrder(new OrderInfo(){
-        Id = orderId,
-        Desc = orderDesc,
-        Price = orderPrice,
-        Date = orderDate,
-        Type = orderType,
-        Address = orderAddress
-
-    });
+    Order newOrder = orderService.CreateOrder(
+        id,
+        desc,
+        price,
+        date,
+        type,
+        address 
+    );
       Console.WriteLine("Order Info: "+" "+
-        string.Join(' ', newOrder.OrderId, newOrder.OrderDesc, newOrder.OrderPrice,newOrder.OrderDate,newOrder.OrderType,newOrder.OrderAddress));
+        string.Join(' ', newOrder.Id, newOrder.Desc, newOrder.Price,newOrder.Date,newOrder.Type,newOrder.Address));
 
 }
 Console.WriteLine(1);
