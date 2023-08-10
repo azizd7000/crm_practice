@@ -32,13 +32,27 @@ void CreateClient()
     Console.Write("Пол: ");
     string gender = Console.ReadLine();
 
+    Console.Write("Номер Телефона: ");
+    string phone = Console.ReadLine();
+
+    Console.Write("Почта: ");
+    string email = Console.ReadLine();
+    
+    Console.Write("Пароль: ");
+    string password = Console.ReadLine();
+
+
+
     Client newClient = clientService.CreateClient(
         firstName,
         lastName,
         middleName,
         age,
         passportNumber,
-        gender 
+        gender,
+        phone,
+        email,
+        password
     );
     
 

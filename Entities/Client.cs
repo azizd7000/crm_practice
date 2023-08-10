@@ -8,6 +8,9 @@ public sealed class Client
     private short _age;
     private string _passportNumber;
     private string _gender;
+    private string _phone;
+    private string _email;
+    private string _password;
 
     public required string FirstName { 
                                       get => _firstName ?? string.Empty;
@@ -37,6 +40,18 @@ public sealed class Client
                                    get => _gender ?? string.Empty;
                                    init => _gender = value is { Length: > 0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
                                   }
+    public required string Phone {  
+                                   get => _phone ?? string.Empty;
+                                   init => _phone = value is { Length: > 0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
+                                  }
+    public required string Email {  
+                                   get => _email ?? string.Empty;
+                                   init => _email = value is { Length: > 0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
+                                  }
 
-   
+    public required string Password {  
+                                   get => _password ?? string.Empty;
+                                   init => _password = value is { Length: > 0 } ? value : throw new ArgumentOutOfRangeException(nameof(value), "Поле не может быть пустым") ; 
+                                  }
+
 }

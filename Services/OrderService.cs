@@ -3,6 +3,8 @@ using Crm;
 namespace Crm.Services;
 public sealed class OrderService
 {
+   private List<Order> ordersList = new List<Order>();
+
     public Order CreateOrder(
         string id,
         string desc,
@@ -12,7 +14,7 @@ public sealed class OrderService
         string address
     )
     {
-     return new()
+     var order = new Order
      {
         Id = id,
         Desc = desc,
@@ -21,5 +23,9 @@ public sealed class OrderService
         Type = type,
         Address = address
      }   ;
+   ordersList.Add(order);
+   return ordersList.FirstOrDefault(order=>order.Desc == desc && order.Id == id);
+
     }
+    
 }
