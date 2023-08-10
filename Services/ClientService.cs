@@ -31,6 +31,7 @@ public sealed class ClientService
    }   ;
    clientsList.Add(client);
    
+   return clientsList.FirstOrDefault(client=>client.FirstName == firstName && client.LastName == lastName);
    }
 
    
