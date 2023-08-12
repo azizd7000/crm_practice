@@ -1,6 +1,5 @@
 namespace Crm.Entities;
-
-public sealed class Client
+public  class Client
 {
     private string _firstName;
     private string _lastName;

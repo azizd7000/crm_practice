@@ -2,15 +2,18 @@
 using Crm.Services;
 using Crm;
 
-ClientService clientService = new();
+IClientService clientService = new ClientService();
 CreateClient();
-OrderService orderService = new();
+
+IOrderService orderService = new OrderService();
 CreateOrder();
+
   static void validateInput (string checkInput ){
         if (checkInput.Length == 0){
         throw new Exception("Поле не может быть пустым");
         }
      }
+
 void CreateClient()
 {   
 
@@ -55,11 +58,7 @@ void CreateClient()
         password
     );
     
-
-
-    Console.WriteLine("Client Info: "+" "+
-        string.Join(' ', newClient.FirstName, newClient.MiddleName, newClient.LastName,newClient.Age,newClient.Gender,newClient.PassportNumber));
-  
+ 
 }
 void CreateOrder()
 {   
@@ -92,8 +91,6 @@ void CreateOrder()
         type,
         address 
     );
-      Console.WriteLine("Order Info: "+" "+
-        string.Join(' ', newOrder.Id, newOrder.Desc, newOrder.Price,newOrder.Date,newOrder.Type,newOrder.Address));
+
 
 }
-Console.WriteLine(2);
